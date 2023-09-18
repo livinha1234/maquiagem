@@ -34,35 +34,44 @@ export default function maquiagem() {
           <Image source={Base} style={estilos.base} />
           <Text style={estilos.preco}>Base Mari Maria: R$ 50,00</Text>
         </View>
-        <View>
+
+        <View style={estilos.divproduto}>
           <Image source={Batom} style={estilos.batom} />
-          <Text style={estilos.preco}>Batom Líquido Ginger Glow: R$ 34,00</Text>
+          <Text style={estilos.preco}>Batom Ginger Glow: R$ 34,00</Text>
         </View>
 
-        <View>
+        <View style={estilos.divproduto}>
           <Image source={Paleta} style={estilos.paleta} />
           <Text style={estilos.preco}>
-            Paleta de sombras Ginger Glow: R$ 87,99
+            Paleta Ginger Glow: R$ 87,99
           </Text>
         </View>
 
-        <View>
+        <View style={estilos.divproduto}>
           <Image source={Iluminador} style={estilos.iluminador} />
           <Text style={estilos.preco}>Iluminador - Stella: R$ 65,90</Text>
         </View>
         
-
+        <View style={estilos.divproduto}>
         <Image source={Gel} style={estilos.gel} />
         <Text style={estilos.preco}>
-          Gel Deliniador para Sobrancelhas: R$ 39,90
+          Gel para Sobrancelhas: R$ 39,90
         </Text>
-        <Image source={Paleta2} style={estilos.paleta2} />
-        <Text style={estilos.preco}>Paleta De Sombra Girl Power: R$ 99,90</Text>
-        <Image source={Pincel} style={estilos.pincel} />
-        <Text style={estilos.preco}>Paleta De Sombra Girl Power: R$ 79,90</Text>
-      </View>
+    </View>
+    
+    
 
-      {/*///////*/}
+    <View style={estilos.divproduto}>
+    <Image source={Paleta2} style={estilos.paleta2} />
+        <Text style={estilos.preco}>Paleta Girl Power: R$ 79,90</Text>
+      </View>
+      
+        <View style={estilos.divproduto}>
+        <Image source={Pincel} style={estilos.pincel} />
+        <Text style={estilos.preco}>Pincel Girl Power: R$ 79,90</Text>
+      </View>
+    </View>
+
     </>
   );
 }
@@ -138,37 +147,48 @@ const estilos = StyleSheet.create({
   },
 
   batom: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 92,
+    borderRadius:5
   },
 
   paleta: {
     width: 100,
-    height: 150,
+    height: 92,
+    borderRadius:5
+
   },
 
   iluminador: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 92,
+    borderRadius:5
+
   },
 
   gel: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 92,
+    borderRadius:5
+
   },
 
   paleta2: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 92,
+    borderRadius:5
+
   },
   pincel: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 92,
+    borderRadius:5
+
   },
 
   nomestituloproduto: {
-    fontSize: 16,
-    lineHeight: 26,
+    fontSize: 19,
+    lineHeight: 35,
     fontWeight: "bold",
     color: "#C71585",
   },
