@@ -2,29 +2,28 @@ import React from "react";
 import {Text, Image, View, StyleSheet} from "react-native";
 import logo from "../../../../assets/logo.jpg";
 
-import Base from "../../../../assets/base.jpg";
-import Batom from "../../../../assets/batom.jpg";
-import Paleta from "../../../../assets/paleta.webp";
-import Iluminador from "../../../../assets/iluminador.webp";
-import Gel from "../../../../assets/gel.jpg";
-import Paleta2 from "../../../../assets/paleta2.webp";
-import Pincel from "../../../../assets/pincel.jpg";
-import Boca from "../../../../assets/logo boca.jpg";
+type Props={
+  nomestitulo: string,
+  preco: string,
+  descricao: string,
+  nomestituloproduto: string,
 
-export default function Detalhe(){
+}
+
+export default function Detalhe({descricao, nomestitulo, preco, nomestituloproduto}:Props){
     return<>
     <Text style={estilos.descricao}>
-        Empodere-se com o simples ato de se maquiar!{" "}
+        {descricao}
       </Text>
-      <Text style={estilos.nomestitulo}> Loja de Maquiagem da Lívia Maria</Text>
+      <Text style={estilos.nomestitulo}>{nomestitulo} </Text>
       <View style={estilos.logo}>
           <Image style={estilos.imagemlogo} source={logo} />
-          <Text style={estilos.nomestitulo}> MariMaria Makeup</Text>
+          <Text style={estilos.nomestitulo}> {nomestitulo}</Text>
         </View>
-     <Text style={estilos.nomestituloproduto}> Produtos:</Text>
+     <Text style={estilos.nomestituloproduto}>{nomestituloproduto}</Text>
           <View style={estilos.divproduto}>
           <Image source={Base} style={estilos.base} />
-          <Text style={estilos.preco}>Base Mari Maria: R$ 50,00</Text>
+          <Text style={estilos.preco}>{preco}</Text>
         </View>
 
         <View style={estilos.divproduto}>
