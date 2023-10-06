@@ -5,13 +5,13 @@ import maquiagem from "../../../../assets/maquiagem.png";
 const width = Dimensions.get("screen").width;
 
 type Props={
-  titulo: string;
+  descricao: string;
 }
 
-  export default function Maquiagem(){
+  export default function Maquiagem({descricao}: Props){
       return<>
       <Image source={maquiagem} style={estilos.maquiagem} />
-      <Text style={estilos.descricao}></Text>
+      <Text style={estilos.descricao}>{descricao}</Text>
       
       </>
   }

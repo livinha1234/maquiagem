@@ -1,16 +1,36 @@
 import React from "react";
 import {Text, Image, View, StyleSheet} from "react-native";
 import logo from "../../../../assets/logo.jpg";
+import base from "../../../../assets/base.jpg";
+import batom from "../../../../assets/batom.jpg";
+import paleta from "../../../../assets/paleta.webp";
+import iluminador from "../../../../assets/iluminador.webp";
+import gel from "../../../../assets/gel.jpg";
+import paleta2 from "../../../../assets/paleta2.webp";
+import pincel from "../../../../assets/pincel.jpg";
 
 type Props={
   nomestitulo: string,
-  preco: string,
-  descricao: string,
   nomestituloproduto: string,
-
+  precobase: string,
+  precobatom: string,
+  precopaleta: string,
+  precoiluminador: string,
+  precogel: string,
+  precop2: string,
+  precopincel: string,
+  descricao: string,
+  nomebase: string,
+  nomebatom: string,
+  nomepaleta: string,
+  nomeiluminador: string,
+  nomegel: string,
+  nomep2: string,
+  nomepincel: string,
+  
 }
 
-export default function Detalhe({descricao, nomestitulo, preco, nomestituloproduto}:Props){
+export default function Detalhe({descricao, nomestitulo, precobase, nomestituloproduto, precobatom ,precopaleta ,precoiluminador ,precogel, precop2, precopincel, nomebatom,nomebase,nomegel,nomeiluminador,nomep2,nomepaleta,nomepincel}:Props){
     return<>
     <Text style={estilos.descricao}>
         {descricao}
@@ -18,48 +38,48 @@ export default function Detalhe({descricao, nomestitulo, preco, nomestituloprodu
       <Text style={estilos.nomestitulo}>{nomestitulo} </Text>
       <View style={estilos.logo}>
           <Image style={estilos.imagemlogo} source={logo} />
-          <Text style={estilos.nomestitulo}> {nomestitulo}</Text>
+          <Text style={estilos.nomestituloproduto}>  {nomestituloproduto} </Text>
         </View>
-     <Text style={estilos.nomestituloproduto}>{nomestituloproduto}</Text>
+
+        <View></View>
+        
           <View style={estilos.divproduto}>
-          <Image source={Base} style={estilos.base} />
-          <Text style={estilos.preco}>{preco}</Text>
+          <Image source={base} style={estilos.base} />
+          <Text style={estilos.preco}>{nomebase}  -  {precobase}</Text>
         </View>
 
         <View style={estilos.divproduto}>
-          <Image source={Batom} style={estilos.batom} />
-          <Text style={estilos.preco}>Batom Ginger Glow: R$ 34,00</Text>
+          <Image source={batom} style={estilos.batom} />
+          <Text style={estilos.preco}>{nomebatom}  -  {precobatom}</Text>
         </View>
 
         <View style={estilos.divproduto}>
-          <Image source={Paleta} style={estilos.paleta} />
+          <Image source={paleta} style={estilos.paleta} />
           <Text style={estilos.preco}>
-            Paleta Ginger Glow: R$ 87,99
+           {nomepaleta}  -  {precopaleta}
           </Text>
         </View>
 
         <View style={estilos.divproduto}>
-          <Image source={Iluminador} style={estilos.iluminador} />
-          <Text style={estilos.preco}>Iluminador - Stella: R$ 65,90</Text>
+          <Image source={iluminador} style={estilos.iluminador} />
+          <Text style={estilos.preco}>{nomeiluminador}  -  {precoiluminador}</Text>
         </View>
         
         <View style={estilos.divproduto}>
-        <Image source={Gel} style={estilos.gel} />
+        <Image source={gel} style={estilos.gel} />
         <Text style={estilos.preco}>
-          Gel para Sobrancelhas: R$ 39,90
+          {nomegel}  -  {precogel}
         </Text>
     </View>
     
-    
-
     <View style={estilos.divproduto}>
-    <Image source={Paleta2} style={estilos.paleta2} />
-        <Text style={estilos.preco}>Paleta Girl Power: R$ 79,90</Text>
+    <Image source={paleta2} style={estilos.paleta2} />
+        <Text style={estilos.preco}>{nomep2}  -  {precop2}</Text>
       </View>
       
         <View style={estilos.divproduto}>
-        <Image source={Pincel} style={estilos.pincel} />
-        <Text style={estilos.preco}>Pincel Girl Power: R$ 79,90</Text>
+        <Image source={pincel} style={estilos.pincel} />
+        <Text style={estilos.preco}>{nomepincel}  -  {precopincel}</Text>
       </View>
     </>
 }
